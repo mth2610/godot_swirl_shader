@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/fae207dd35e29ba5067ccc0d524a5ff2 (1).png-7d2d03e8b7633e97ed389af303c4f52d.stex"
+
+[deps]
+
+source_file="res://fae207dd35e29ba5067ccc0d524a5ff2 (1).png"
+source_md5="c75f0ba41dd913e67bd696f531380908"
+
+dest_files=[ "res://.import/fae207dd35e29ba5067ccc0d524a5ff2 (1).png-7d2d03e8b7633e97ed389af303c4f52d.stex" ]
+dest_md5="7ae417c9ec0c7d61e465f771efe46017"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

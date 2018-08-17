@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://fae207dd35e29ba5067ccc0d524a5ff2 (1).png" type="Texture" id=1]
+
+[sub_resource type="Shader" id=1]
+
+code = "shader_type canvas_item;
+
+void fragment(){
+	float pi = 3.14;
+	vec2 position = UV;
+	float distance_to_center = distance(position, vec2(0.5, 0.5));
+	float rotation_index = distance_to_center*1.0*pi*sin(TIME/20.0);
+	
+	// move to 0.5, 0.5 
+	position -= vec2(0.5, 0.5);
+	
+	//apply rotation transformation
+	
+	mat2 rotation_matrix = mat2(vec2(sin(rotation_index), -cos(rotation_index)),
+								vec2(cos(rotation_index), sin(rotation_index)));
+	position = position*rotation_matrix;
+	
+	//move back 
+	position += vec2(0.5, 0.5);
+	
+	COLOR = texture(TEXTURE, position);
+	
+	
+}"
+
+[sub_resource type="ShaderMaterial" id=2]
+
+render_priority = 0
+shader = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" index="0"]
+
+material = SubResource( 2 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Material" ]
+
+
